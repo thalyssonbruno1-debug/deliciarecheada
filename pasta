@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RR DELICIAS RECHEADAS - Tapioca e Batata Recheada por Delivery</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #a75707, #f4f4f4);
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #5b1800;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        header p {
+            font-size: 1.3em;
+            margin: 10px 0;
+        }
+        .cta-button {
+            background-color: #fff;
+            color: #ff4500;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .cta-button:hover {
+            background-color: #ffcc00;
+            transform: scale(1.05);
+        }
+        section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+        #cardapio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .menu-item {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .menu-item .content {
+            padding: 20px;
+        }
+        .menu-item h3 {
+            margin: 0 0 10px 0;
+            color: #d2691e;
+            font-size: 1.5em;
+        }
+        .menu-item p {
+            margin: 10px 0;
+            color: #666;
+        }
+        .price {
+            font-weight: bold;
+            font-size: 1.3em;
+            color: #ff4500;
+        }
+        .menu-item .cta-button {
+            width: 100%;
+            margin-top: 15px;
+            padding: 12px;
+            font-size: 1em;
+        }
+        #checkout {
+            background-color: #f9f9f9;
+            border-top: 2px solid #ffcc00;
+        }
+        #cart-items {
+            list-style: none;
+            padding: 0;
+        }
+        #cart-items li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        #cart-items button {
+            background: #ff4500;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #cart-items button:hover {
+            background: #e63900;
+        }
+        #total {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #ff4500;
+            text-align: right;
+            margin-top: 20px;
+        }
+        #feedback {
+            text-align: center;
+        }
+        #feedback blockquote {
+            font-style: italic;
+            margin: 20px 0;
+            padding: 15px;
+            background: #f9f9f9;
+            border-left: 5px solid #ffcc00;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        @media (max-width: 768px) {
+            #cardapio {
+                grid-template-columns: 1fr;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>RR DELICIAS RECHEADAS</h1>
+        <p>Sabores irresistíveis de tapioca e batata recheada, entregues quentinhas na sua porta! Deixe a magia da comida caseira despertar seu apetite – peça agora e sinta o prazer!</p>
+        <button class="cta-button" onclick="window.open('https://wa.me/5569992948959?text=Olá, quero fazer um pedido!', '_blank')">Peça pelo WhatsApp!</button>
+    </header>
+
+    <section id="cardapio">
+        <img src="https://scontent.cdninstagram.com/v/t51.82787-15/521386400_17846191734532456_1370061229251611920_n.webp?_nc_cat=103&ig_cache_key=MzY4MzI3MjcxMzE0MzI1NTc2NQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEwODB4MTI3Ny5zZHIuQzMifQ%3D%3D&_nc_ohc=b4qiguP5EbMQ7kNvwGgN6-N&_nc_oc=AdmaRa5j5EIQM8lponixK8CqLWuFHW5huL7YzF_V_pZn7H9QJecbkN04IRHqBLDT3qtmFp2oA8IM4Qq0wZkhWvdh&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=u9fU8WseaNOW0xq9bw4iog&oh=00_AfvkgQqFYl82nRCUcG7ZIgz1mL53mfjAE7J_d81dSEIcsA&oe=6986C32F" alt="Tapioca e Batata Recheada" style="width:100%; border-radius:15px; margin-bottom:20px;">
+        <h3>Nosso Cardápio Delicioso</h3>
+        <p>Sabor que abraça, Recheio que surpreende.</p>
+        
+        <div class="menu-item">
+            <img src="https://receitasgourmetdavovo.com.br/wp-content/uploads/2022/04/tapioca-de-queijo.jpg" alt="Tapioca de Queijo">
+            <div class="content">
+                <h3>Tapioca de Queijo</h3>
+                <p>Massa fina e crocante recheada com queijo derretido. Perfeita para um lanche rápido e saboroso que vai te fazer salivar!</p>
+                <p class="price">R$ 15,00</p>
+                <button class="cta-button" onclick="addToCart('Tapioca de Queijo', 15.00)">Adicionar ao Pedido</button>
+            </div>
+        </div>
+        
+        <div class="menu-item">
+            <img src="https://www.grupopq.com.br/wp-content/uploads/2023/02/SITE-9-768x768.png" alt="Tapioca de Frango">
+            <div class="content">
+                <h3>Tapioca de Frango com Catupiry</h3>
+                <p>Frango desfiado com catupiry cremoso dentro de uma tapioca dourada. Uma explosão de sabores que vai te conquistar!</p>
+                <p class="price">R$ 18,00</p>
+                <button class="cta-button" onclick="addToCart('Tapioca de Frango com Catupiry', 18.00)">Adicionar ao Pedido</button>
+            </div>
+        </div>
+        
+        <div class="menu-item">
+            <img src="https://www.comidaereceitas.com.br/wp-content/uploads/2022/08/batatas-assadas-com-bacon-com-queijo.jpg" alt="Batata Recheada de Queijo">
+            <div class="content">
+                <h3>Batata Recheada de Queijo</h3>
+                <p>Batata assada recheada com queijo, bacon. Crocante por fora, cremosa por dentro – irresistível!</p>
+                <p class="price">R$ 18,00</p>
+                <button class="cta-button" onclick="addToCart('Batata Recheada de Queijo', 18.00)">Adicionar ao Pedido</button>
+            </div>
+        </div>
+        
+        <div class="menu-item">
+            <img src="https://i.pinimg.com/originals/40/86/7b/40867b68ab99de2ea32da09180dc3422.jpg" alt="Batata Recheada de Carne">
+            <div class="content">
+                <h3>Batata Recheada de Costela</h3>
+                <p>Costela com requeijão, dentro de uma batata gigante. Ideal para quem ama um sabor forte e reconfortante!</p>
+                <p class="price">R$ 22,00</p>
+                <button class="cta-button" onclick="addToCart('Batata Recheada de Costela', 22.00)">Adicionar ao Pedido</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="checkout">
+        <h2>Seu Carrinho de Compras</h2>
+        <ul id="cart-items"></ul>
+        <p id="total">Total: R$ 0,00</p>
+        <button class="cta-button" onclick="checkout()">Finalizar Pedido via WhatsApp</button>
+    </section>
+
+    <section id="feedback">
+        <h2>O que Nossos Clientes Dizem</h2>
+        <blockquote>"A tapioca de frango é divina! Chegou quentinha e me fez repetir o pedido na semana seguinte. Recomendo!" - Maria S.</blockquote>
+        <blockquote>"Batata recheada perfeita para um jantar rápido. Preço justo e sabor incrível. Vou virar cliente fiel!" - João P.</blockquote>
+        <blockquote>"Entrega rápida e comida fresquinha. A magia está na simplicidade e no gosto!" - Ana L.</blockquote>
+    </section>
+
+    <footer>
+        <p>© 2023 RR DELICIAS RECHEADAS. Delivery em campinas e região. | WhatsApp: (69) 99294-8959</p>
+    </footer>
+
+    <script>
+        let cart = [];
+
+        function addToCart(itemName, price) {
+            const existingItem = cart.find(item => item.name === itemName);
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                cart.push({ name: itemName, price: price, quantity: 1 });
+            }
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            cartItems.innerHTML = '';
+            let total = 0;
+            cart.forEach((item, index) => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    ${item.name} (R$ ${item.price.toFixed(2)}) x ${item.quantity} = R$ ${(item.price * item.quantity).toFixed(2)}
+                    <button onclick="changeQuantity(${index}, 1)">+</button>
+                    <button onclick="changeQuantity(${index}, -1)">-</button>
+                    <button onclick="removeItem(${index})">Remover</button>
+                `;
+                cartItems.appendChild(li);
+                total += item.price * item.quantity;
+            });
+            document.getElementById('total').textContent = `Total: R$ ${total.toFixed(2)}`;
+        }
+
+        function changeQuantity(index, delta) {
+            cart[index].quantity += delta;
+            if (cart[index].quantity <= 0) {
+                cart.splice(index, 1);
+            }
+            updateCart();
+        }
+
+        function removeItem(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert('Seu carrinho está vazio!');
+                return;
+            }
+            let message = 'Pedido:\n';
+            let total = 0;
+            cart.forEach(item => {
+                message += `${item.quantity}x ${item.name} (R$ ${(item.price * item.quantity).toFixed(2)})\n`;
+                total += item.price * item.quantity;
+            });
+            message += `Total: R$ ${total.toFixed(2)}`;
+            const whatsappUrl = `https://wa.me/5569992948959?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
